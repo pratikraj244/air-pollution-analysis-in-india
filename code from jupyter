@@ -1,0 +1,148 @@
+       #---------cell0----------
+
+import matplotlib.pyplot as plt
+import pandas as pd
+c = pd.read_csv("air pollution2.csv")
+c
+  
+       #---------cell1----------
+
+plt.bar(c["short form"],c["PM10 in %"],color = "blue")
+plt.title("PM10 %")
+params = ['figure.facecolor','axes.facecolor','savefig.facecolor']
+params2 = ['text.color','axes.labelcolor','xtick.color','ytick.color']
+plt.style.use("seaborn-dark")
+for i in params:
+    plt.rcParams[i] = '#000088'
+for i in params2:
+    plt.rcParams[i] = '0.9'
+plt.show()
+
+       #---------cell2----------
+
+plt.bar(c["short form"],c["SO2 in %"],color="orange")
+plt.title("SO2 %")
+params3 = ['figure.facecolor','axes.facecolor','savefig.facecolor']
+params4 = ['text.color','axes.labelcolor','xtick.color','ytick.color']
+plt.style.use("seaborn-dark")
+for i in params3:
+    plt.rcParams[i] = '#993600'
+for i in params4:
+    plt.rcParams[i] = '0.9'
+plt.show()
+
+      #---------cell3----------
+plt.bar(c["short form"],c["Nox in %"],color="aquamarine")
+plt.title("Nox %")
+params5 = ['figure.facecolor','axes.facecolor','savefig.facecolor']
+params6 = ['text.color','axes.labelcolor','xtick.color','ytick.color']
+plt.style.use("seaborn-dark")
+for i in params5:
+    plt.rcParams[i] = '#009966'
+for i in params6:
+    plt.rcParams[i] = '0.9'
+plt.show()
+
+      #---------cell4----------
+
+      
+plt.bar(c["short form"],c["CO in %"],color="yellow")
+plt.title("CO %")
+params7 = ['figure.facecolor','axes.facecolor','savefig.facecolor']
+params8 = ['text.color','axes.labelcolor','xtick.color','ytick.color']
+plt.style.use("seaborn-dark")
+for i in params7:
+    plt.rcParams[i] = '#885100'
+for i in params8:
+    plt.rcParams[i] = '0.9'
+plt.show()
+
+      #---------cell5----------
+
+      
+plt.bar(c["short form"],c["CO2 in %"],color="violet")
+plt.title("CO2 %")
+params9 = ['figure.facecolor','axes.facecolor','savefig.facecolor']
+params10 = ['text.color','axes.labelcolor','xtick.color','ytick.color']
+plt.style.use("seaborn-dark")
+for i in params9:
+    plt.rcParams[i] = '#810099'
+for i in params10:
+    plt.rcParams[i] = '0.9'
+plt.show()
+
+      #---------cell6----------
+
+      
+plt.plot(c["short form"],c["PM10 in %"],color="blue",marker="o",label = "PM10 %")
+plt.plot(c["short form"],c["SO2 in %"],color="orange",marker="o",label = "SO2 %")
+plt.plot(c["short form"],c["Nox in %"],color="aquamarine",marker="o",label = "Nox %")
+plt.plot(c["short form"],c["CO in %"],color="yellow",marker="o",label = "CO %")
+plt.plot(c["short form"],c["CO2 in %"],color="violet",marker="o",label = "CO2 %")
+params9 = ['figure.facecolor','axes.facecolor','savefig.facecolor']
+params10 = ['text.color','axes.labelcolor','xtick.color','ytick.color']
+plt.style.use("seaborn-dark")
+for i in params9:
+    plt.rcParams[i] = '#000045'
+for i in params10:
+    plt.rcParams[i] = '0.9'
+plt.legend()
+plt.show()
+
+      #---------cell7----------
+
+  
+plt.plot(c["diseases short form"],c["% in diseases"],color="yellow",marker="o",label = "PM10 %")
+params19 = ['figure.facecolor','axes.facecolor','savefig.facecolor']
+params20 = ['text.color','axes.labelcolor','xtick.color','ytick.color']
+plt.title("disease %")
+plt.style.use("seaborn-dark")
+for i in params19:
+    plt.rcParams[i] = '#889600'
+for i in params20:
+    plt.rcParams[i] = '0.9'
+plt.show()
+
+      #---------cell8----------
+
+      
+plt.bar(c["top states short form"].astype(str),c["AQI PM 2.5"],color="red")
+params11 = ['figure.facecolor','axes.facecolor','savefig.facecolor']
+params12 = ['text.color','axes.labelcolor','xtick.color','ytick.color']
+plt.title("states with high AQI")
+plt.style.use("seaborn-dark")
+for i in params11:
+    plt.rcParams[i] = '#600000'
+for i in params12:
+    plt.rcParams[i] = '0.9'
+plt.show()
+
+      #---------cell9----------
+
+      
+plt.bar(c["bottom states short form"].astype(str),c["AQI PM 2.5.1"],color="green")
+params13 = ['figure.facecolor','axes.facecolor','savefig.facecolor']
+params14 = ['text.color','axes.labelcolor','xtick.color','ytick.color']
+plt.title("states with low AQI")
+plt.style.use("seaborn-dark")
+for i in params13:
+    plt.rcParams[i] = '#004800'
+for i in params14:
+    plt.rcParams[i] = '0.9'
+plt.show()
+
+      #---------cell10----------
+
+      
+plt.plot(c["top states short form"].astype(str),c["AQI PM 2.5"],marker="o",color="red",label="high AQI")
+plt.plot(c["bottom states short form"].astype(str),c["AQI PM 2.5.1"],marker="o",color="green",label="low AQI")
+params15 = ['figure.facecolor','axes.facecolor','savefig.facecolor']
+params16 = ['text.color','axes.labelcolor','xtick.color','ytick.color']
+plt.title("states with low vs high AQI")
+plt.style.use("seaborn-dark")
+for i in params15:
+    plt.rcParams[i] = '#002458'
+for i in params16:
+    plt.rcParams[i] = '0.9'
+plt.legend()
+plt.show()
